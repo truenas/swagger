@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+export DH_VERBOSE = 1
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	sh -c "\
+		mkdir -p debian/swagger-ui-dist/usr/local/share; \
+		npm install swagger-ui-dist@3.35.2; \
+		cp -a node_modules/swagger-ui-dist debian/swagger-ui-dist/usr/local/share/; \
+	"
+
+override_dh_usrlocal:
+

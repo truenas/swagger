@@ -1,0 +1,13 @@
+Source: swagger-ui-dist
+Section: web
+Priority: optional
+Maintainer: Waqar Ahmed <waqar@ixsystems.com> 
+Build-Depends: debhelper-compat (= 12), npm
+Standards-Version: 4.4.1
+Homepage: https://github.com/truenas/swagger
+
+Package: swagger-ui-dist
+Architecture: all
+Depends: ${misc:Depends}
+Description: Swagger Debian package
+ This package installs swagger-ui-dist.
